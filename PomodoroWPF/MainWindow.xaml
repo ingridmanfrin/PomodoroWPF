@@ -1,0 +1,215 @@
+﻿<Window x:Class="PomodoroWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PomodoroWPF"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        Title="MainWindow"
+        Height="750"
+        Width="740">
+    <Grid Background="#FFFDE25E"
+          Cursor="Hand">
+
+
+        <materialDesign:PackIcon Kind="TimerCheckOutline"
+                                 Height="32"
+                                 Width="44"
+                                 Margin="29,13,0,0"
+                                 Foreground="#FFFDFBFB" />
+        <Label Content="Cronômetro Pomodoro"
+               VerticalAlignment="Top"
+               Height="35"
+               Margin="73,13,10,0"
+               FontSize="22"
+               Foreground="#FDFFFFFF" />
+        <Grid Margin="0,77,0,0"
+              Height="338"
+              VerticalAlignment="Top"
+              Width="594"
+              HorizontalAlignment="Center">
+            <Rectangle Height="303"
+                       VerticalAlignment="Top"
+                       Fill="#FFFFE87A"
+                       RadiusY="7"
+                       RadiusX="7"
+                       Margin="58,6,58,0" />
+            <Label Content="25:00"
+                   HorizontalAlignment="Center"
+                   Margin="0,92,0,0"
+                   VerticalAlignment="Top"
+                   Height="112"
+                   Width="256"
+                   FontSize="100
+                   "
+                   Foreground="#DDFFFFFF" />
+            <Button Background="#7F989797"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignIconButton}"
+                    ToolTip="MaterialDesignIconButton"
+                    Margin="185,236,0,0"
+                    Cursor="Hand"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top">
+                <materialDesign:PackIcon Kind="Play"
+                                         Foreground="White" />
+            </Button>
+            <Button Background="#7F989797"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignIconButton}"
+                    ToolTip="MaterialDesignIconButton"
+                    Margin="241,236,0,0"
+                    Cursor="Hand"
+                    Height="48"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Width="48">
+                <materialDesign:PackIcon Kind="Pause"
+                                         Foreground="White" />
+            </Button>
+            <Button Background="#7F989797"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignIconButton}"
+                    ToolTip="MaterialDesignIconButton"
+                    Margin="297,236,0,0"
+                    Cursor="Hand"
+                    Height="48"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Width="48">
+                <materialDesign:PackIcon Kind="Restore"
+                                         Foreground="White" />
+            </Button>
+            <Button Background="#7F989797"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignIconButton}"
+                    ToolTip="MaterialDesignIconButton"
+                    Margin="355,236,0,0"
+                    Cursor="Hand"
+                    Height="48"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Width="48">
+                <materialDesign:PackIcon Kind="SkipNext"
+                                         Foreground="White" />
+            </Button>
+            <Button Content="Pomodoro"
+                    Margin="129,28,0,0"
+                    VerticalAlignment="Top"
+                    Foreground="#DDFFFFFF"
+                    Background="#7F989797"
+                    BorderBrush="#7F989797"
+                    Cursor="Hand"
+                    HorizontalAlignment="Left"
+                    Width="98" />
+            <Button Content="Pausa Curta"
+                    HorizontalAlignment="Left"
+                    Margin="237,28,0,0"
+                    VerticalAlignment="Top"
+                    Foreground="#7FFFFFFF"
+                    Background="#7FD8D8D8"
+                    BorderBrush="#7FD8D8D8"
+                    Cursor="Hand"
+                    Width="113" />
+            <Button Content="Pausa Longa"
+                    HorizontalAlignment="Left"
+                    Margin="357,28,0,0"
+                    VerticalAlignment="Top"
+                    Foreground="#7FFFFFFF"
+                    Background="#7FD8D8D8"
+                    BorderBrush="#7FD8D8D8"
+                    Cursor="Hand"
+                    Width="113" />
+
+        </Grid>
+        <Grid Margin="0,423,0,0"
+              Height="235"
+              VerticalAlignment="Top"
+              Width="594"
+              HorizontalAlignment="Center">
+            <Rectangle Height="201"
+                       VerticalAlignment="Top"
+                       Fill="#FFFFE87A"
+                       RadiusY="7"
+                       RadiusX="7"
+                       Margin="58,19,58,0" />
+            <materialDesign:Card Padding="0"
+                                 Background="#7F989797"
+                                 Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                                 Margin="96,57,96,62">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0"
+                               Margin="16,16,16,4"
+                               Style="{StaticResource MaterialDesignHeadline5TextBlock}"
+                               Text="Tarefa Teste" />
+
+                    <TextBlock Grid.Row="0"
+                               Margin="16,16,16,4"
+                               HorizontalAlignment="Right"
+                               Style="{StaticResource MaterialDesignHeadline5TextBlock}"
+                               Text="Ciclos: 2"
+                               FontSize="17"
+                               VerticalAlignment="Center" />
+                    <Separator Grid.Row="1"
+                               Style="{StaticResource MaterialDesignLightSeparator}" />
+                    <TextBlock Grid.Row="2"
+                               Margin="16,0,16,8"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Style="{StaticResource MaterialDesignBody2TextBlock}"
+                               Text="Adicione mais Tarefas" />
+                    <StackPanel Grid.Row="2"
+                                Margin="16,0,16,8"
+                                HorizontalAlignment="Right"
+                                Orientation="Horizontal">
+
+                        <Button Width="30"
+                                Padding="2,0,2,0"
+                                HorizontalAlignment="Right"
+                                Style="{StaticResource MaterialDesignToolForegroundButton}"
+                                materialDesign:RippleAssist.IsCentered="True"
+                                materialDesign:DialogHost.DialogClosingAttached="Sample2_DialogHost_OnDialogClosing"
+                                Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}">
+                            <materialDesign:PackIcon Kind="Plus" />
+                            <Button.CommandParameter>
+                                <StackPanel Margin="16">
+                                    <ProgressBar Margin="16"
+                                                 HorizontalAlignment="Center"
+                                                 IsIndeterminate="True"
+                                                 Style="{StaticResource MaterialDesignCircularProgressBar}"
+                                                 Value="0" />
+                                    <Button HorizontalAlignment="Center"
+                                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                                            CommandParameter="Sample2Cancel"
+                                            Content="CANCEL"
+                                            IsCancel="True"
+                                            Style="{StaticResource MaterialDesignFlatButton}" />
+                                </StackPanel>
+                            </Button.CommandParameter>
+                        </Button>
+                        <materialDesign:PopupBox Padding="2,0,2,0"
+                                                 HorizontalAlignment="Right">
+                            <StackPanel>
+                                <Button Content="Adicionar Tarefa" />
+                                <Button Content="Lista de Tarefas" />
+                            </StackPanel>
+                        </materialDesign:PopupBox>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:Card>
+
+        </Grid>
+
+    </Grid>
+</Window>
