@@ -52,18 +52,21 @@
                    FontSize="100
                    "
                    Foreground="#DDFFFFFF" />
-            <Button Background="#7F989797"
+            <Button x:Name="BtnIniciar"
+                    Background="#7F989797"
                     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                     Style="{StaticResource MaterialDesignIconButton}"
                     ToolTip="MaterialDesignIconButton"
                     Margin="185,236,0,0"
                     Cursor="Hand"
                     HorizontalAlignment="Left"
-                    VerticalAlignment="Top">
+                    VerticalAlignment="Top"
+                    Click="BtnIniciar_Click">
                 <materialDesign:PackIcon Kind="Play"
                                          Foreground="White" />
             </Button>
-            <Button Background="#7F989797"
+            <Button x:Name="BtnPausar"
+                    Background="#7F989797"
                     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                     Style="{StaticResource MaterialDesignIconButton}"
                     ToolTip="MaterialDesignIconButton"
@@ -72,11 +75,13 @@
                     Height="48"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"
-                    Width="48">
+                    Width="48"
+                    Click="BtnPausar_Click">
                 <materialDesign:PackIcon Kind="Pause"
                                          Foreground="White" />
             </Button>
-            <Button Background="#7F989797"
+            <Button x:Name="BtnResetar"
+                    Background="#7F989797"
                     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                     Style="{StaticResource MaterialDesignIconButton}"
                     ToolTip="MaterialDesignIconButton"
@@ -85,11 +90,13 @@
                     Height="48"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"
-                    Width="48">
+                    Width="48"
+                    Click="BtnResetar_Click">
                 <materialDesign:PackIcon Kind="Restore"
                                          Foreground="White" />
             </Button>
-            <Button Background="#7F989797"
+            <Button x:Name="BtnAvancar"
+                    Background="#7F989797"
                     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                     Style="{StaticResource MaterialDesignIconButton}"
                     ToolTip="MaterialDesignIconButton"
